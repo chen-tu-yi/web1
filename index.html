@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Figma → Code Starter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ====== Header / Navbar ====== -->
+  <header class="container header">
+    <a class="logo" href="#">
+      <!-- 放你的 logo.svg：把檔案存到 assets/svg/logo.svg，然後改成 <img src="assets/svg/logo.svg" alt="Logo"> -->
+      <span class="logo-mark"></span><span class="logo-text">YourStudio</span>
+    </a>
+    <nav class="nav">
+      <a href="#services">服務</a>
+      <a href="#work">作品</a>
+      <a href="#contact">聯絡</a>
+      <a class="btn btn-primary" href="#contact">立即洽詢</a>
+    </nav>
+  </header>
+
+  <!-- ====== Hero ====== -->
+  <section class="section hero container">
+    <div class="hero-copy">
+      <h1 class="h1">讓您的品牌在線上脫穎而出</h1>
+      <p class="lead">把 Figma 的設計轉成乾淨的 HTML/CSS，保留語意與可維護性。</p>
+      <div class="stack-h">
+        <a class="btn btn-primary" href="#contact">立即開始</a>
+        <a class="btn btn-ghost" href="#services">了解更多</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <!-- 可放插畫 SVG；範例用佔位圖 -->
+      <div class="placeholder">Hero 圖片</div>
+    </div>
+  </section>
+
+  <!-- ====== Services ====== -->
+  <section id="services" class="section container">
+    <h2 class="h2">我們的服務</h2>
+    <div class="grid-3">
+      <article class="card">
+        <div class="icon-circle"></div>
+        <h3 class="h3">網站設計</h3>
+        <p class="muted">設計系統、資訊架構、響應式版面。</p>
+      </article>
+      <article class="card">
+        <div class="icon-circle accent"></div>
+        <h3 class="h3">前端開發</h3>
+        <p class="muted">React/Next.js，效能與可維護性優先。</p>
+      </article>
+      <article class="card">
+        <div class="icon-circle success"></div>
+        <h3 class="h3">後端開發</h3>
+        <p class="muted">Node.js/Express + DB + API 安全。</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ====== Portfolio ====== -->
+  <section id="work" class="section section-alt">
+    <div class="container">
+      <h2 class="h2">作品展示</h2>
+      <div class="grid-3">
+        <div class="placeholder">作品 1</div>
+        <div class="placeholder">作品 2</div>
+        <div class="placeholder">作品 3</div>
+        <div class="placeholder">作品 4</div>
+        <div class="placeholder">作品 5</div>
+        <div class="placeholder">作品 6</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Contact ====== -->
+  <section id="contact" class="section container">
+    <h2 class="h2">聯絡我們</h2>
+    <form class="form">
+      <label>姓名<input type="text" placeholder="您的名字"></label>
+      <label>Email<input type="email" placeholder="you@example.com"></label>
+      <label class="span-2">訊息<textarea rows="4" placeholder="請描述您的需求"></textarea></label>
+      <button class="btn btn-primary span-2" type="submit">送出</button>
+    </form>
+  </section>
+
+  <!-- ====== Footer ====== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2025 Your Studio. All rights reserved.</span>
+      <nav class="nav small">
+        <a href="#">FB</a><a href="#">IG</a><a href="#">LinkedIn</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

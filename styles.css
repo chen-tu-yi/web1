@@ -1,0 +1,105 @@
+:root{
+  /* === Design Tokens === (把這些改成你 Figma 的品牌樣式) */
+  --brand: #1E90FF;
+  --accent: #FFD700;
+  --success: #10B981;
+  --ink: #1F2937;
+  --muted: #6B7280;
+  --bg: #F8FAFC;
+  --bg-alt: #F1F5F9;
+  --surface: #FFFFFF;
+  --border: #E5E7EB;
+
+  --radius: 14px;
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 16px;
+  --space-4: 20px;
+  --space-5: 28px;
+  --space-6: 40px;
+  --container: 1100px;
+
+  --h1: clamp(32px, 5vw, 44px);
+  --h2: clamp(24px, 3.5vw, 32px);
+  --h3: 20px;
+  --lead: 20px;
+
+  --shadow-1: 0 4px 16px rgba(0,0,0,.06);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;color:var(--ink);background:var(--bg);font:16px/1.65 system-ui, -apple-system, Segoe UI, Roboto, Noto Sans TC, 'PingFang TC', 'Heiti TC', sans-serif}
+
+/* Layout helpers */
+.container{max-width:var(--container);margin-inline:auto;padding:0 var(--space-4)}
+.section{padding:var(--space-6) 0}
+.section-alt{background:var(--bg-alt)}
+.header{display:flex;align-items:center;gap:var(--space-4);padding:var(--space-3) 0;justify-content:space-between} /* 修改這一行 */
+.footer{background:var(--ink);color:#fff;margin-top:var(--space-6);}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;padding:var(--space-3) 0}
+.nav{display:flex;align-items:center;gap:var(--space-3)}
+.nav.small a{opacity:.8}.nav a {
+  text-decoration: none;      /* 移除底線 */
+  color: var(--ink);          /* 黑色 */
+  font-weight: 700;           /* 粗體 */
+  font-size: 1.15rem;         /* 放大一點 */
+  transition: color 0.2s;
+}
+
+.nav a:hover {
+  color: var(--brand);        /* 滑過時變品牌色，可選 */
+}
+
+/* Typography */
+.h1{font-weight:800;font-size:var(--h1);margin:0 0 var(--space-2)}
+.h2{font-weight:700;font-size:var(--h2);margin:0 0 var(--space-4)}
+.h3{font-weight:700;font-size:var(--h3);margin:var(--space-2) 0 var(--space-1)}
+.lead{font-size:var(--lead);color:var(--muted);margin:0 0 var(--space-4)}
+.muted{color:var(--muted)}
+
+/* Components */
+.logo{display:flex;align-items:center;gap:var(--space-2);text-decoration:none;color:inherit}
+.logo-mark{width:28px;height:28px;border-radius:8px;background:var(--brand)}
+.logo-text{font-weight:800;letter-spacing:.2px}
+.btn {
+  display: inline-block;
+  padding: 8px 10px; /* 框框變小 */
+  border-radius: 12px;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all .2s ease;
+}
+.btn-primary{background:var(--brand);color:#fff}
+.btn-primary:hover{filter:brightness(.95)}
+.btn-ghost{background:transparent;color:var(--brand);border-color:var(--brand)}
+.btn-ghost:hover{background:color-mix(in srgb, var(--brand) 10%, white)}
+
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:var(--space-4);box-shadow:var(--shadow-1)}
+.icon-circle{width:32px;height:32px;border-radius:999px;background:var(--brand);margin-bottom:var(--space-2)}
+.icon-circle.accent{background:var(--accent)}
+.icon-circle.success{background:var(--success)}
+
+.placeholder{height:140px;border:1px dashed var(--border);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;color:var(--muted)}
+
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-4)}
+.stack-h{display:flex;gap:var(--space-3);flex-wrap:wrap}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1.2fr 1fr;align-items:center;gap:var(--space-6)}
+.hero-art .placeholder{height:280px}
+
+/* Form */
+.form{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4);margin-top:var(--space-3)}
+.form label{display:flex;flex-direction:column;gap:var(--space-1);font-weight:600}
+.form input,.form textarea{padding:12px 14px;border:1px solid var(--border);border-radius:12px;background:#fff;font:inherit}
+.form .span-2{grid-column:span 2}
+
+/* Responsive */
+@media (max-width: 900px){
+  .grid-3{grid-template-columns:1fr}
+  .hero{grid-template-columns:1fr}
+  .form{grid-template-columns:1fr}
+  .form .span-2{grid-column:auto}
+}
