@@ -1,0 +1,16 @@
+{
+  "name": "web1",
+  "version": "1.0.0",
+  "description": "這個範例專案示範如何把 Figma 設計轉成乾淨的 HTML/CSS： - 以 **Design Tokens（CSS 變數）** 定義品牌色、字體大小、間距與圓角 - 使用 **Flex/Grid** 排版，SVG 只負責 Logo/Icon/插畫 - 可直接在 VS Code 打開 `index.html` 預覽（無需建置流程）",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/server-filesystem": "^2025.7.29",
+    "sqlite3": "^5.1.7"
+  }
+}
